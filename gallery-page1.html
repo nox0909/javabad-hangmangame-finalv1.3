@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JAVABAD - Home</title>
+     <link rel="stylesheet" href="styles2.css">
+ </head>
+ <body>
+     <header class="header">
+         <a href="#" class="logo">JAVABAD</a>
+         <nav class="nav-bar">
+             <a href="overview1.html" class="active">Home</a>
+             <a href="information1.html" class="">Info</a>
+             <a href="contact-info1.html" class="">Contact Us</a>
+             <a href="gallery-page1.html" class="">Gallery</a>
+         </nav>
+    </header>
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('hangman-bg1.jpg')">
+                <div class="content">
+                    <h2>Background</h2>
+                    <p>
+                        This is the background image of both website and the game itself.
+                    </p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('image1.jpg')">
+                <div class="content">
+                    <h2>Inspo</h2>
+                    <p>
+                        This is inspiration; the reason why we created our game-
+                        to give the players a background of how we came up with this game/idea. 
+                        <br>
+                        <a href="https://youtu.be/hSSdc8vKP1I?si=NGbJZVm-7U2xHNUI">Watch the video</a>
+                    </p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('image2.png')">
+                <div class="content">
+                    <h2>Gameplay</h2>
+                    <p>
+                        Overview of the game, are you ready to play?
+                    </p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('lost.gif')">
+                <div class="content">
+                    <h2>Img 04</h2>
+                    <p>Game Over! Try again.
+                    </p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('victory.gif')">
+                <div class="content">
+                    <h2>Img 05</h2>
+                    <p>Victory! Yu won the game.
+                    </p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('coding-bg1.jpg')">
+                <div class="content">
+                    <h2>Img 06</h2>
+                    <p>Code your way to victory.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
+    </script>
+</body>
+</html>
